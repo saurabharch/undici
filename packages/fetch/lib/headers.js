@@ -2,9 +2,9 @@
 
 'use strict'
 
-const { kHeadersList } = require('../core/symbols')
+const { kHeadersList } = require('@undici/core/symbols')
 const { kGuard } = require('./symbols')
-const { kEnumerableProperty } = require('../core/util')
+const { kEnumerableProperty } = require('@undici/core/util')
 const {
   makeIterator,
   isValidHeaderName,

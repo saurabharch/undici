@@ -1,0 +1,6 @@
+{
+  "name": "@undici/fetch",
+  "dependencies": {
+    "@undici/core": "file:../core"
+  }
+}

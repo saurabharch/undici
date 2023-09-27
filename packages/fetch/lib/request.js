@@ -5,7 +5,7 @@
 const { extractBody, mixinBody, cloneBody } = require('./body')
 const { Headers, fill: fillHeaders, HeadersList } = require('./headers')
 const { FinalizationRegistry } = require('../compat/dispatcher-weakref')()
-const util = require('../core/util')
+const util = require('@undici/core/util')
 const {
   isValidHTTPToken,
   sameOrigin,
@@ -27,7 +27,7 @@ const { kHeaders, kSignal, kState, kGuard, kRealm } = require('./symbols')
 const { webidl } = require('./webidl')
 const { getGlobalOrigin } = require('./global')
 const { URLSerializer } = require('./dataURL')
-const { kHeadersList } = require('../core/symbols')
+const { kHeadersList } = require('@undici/core/symbols')
 const assert = require('assert')
 const { getMaxListeners, setMaxListeners, getEventListeners, defaultMaxListeners } = require('events')
 

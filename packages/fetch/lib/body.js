@@ -1,7 +1,7 @@
 'use strict'
 
 const Busboy = require('busboy')
-const util = require('../core/util')
+const util = require('@undici/core/util')
 const {
   ReadableStreamFrom,
   isBlobLike,
@@ -15,9 +15,9 @@ const { kState } = require('./symbols')
 const { webidl } = require('./webidl')
 const { DOMException, structuredClone } = require('./constants')
 const { Blob, File: NativeFile } = require('buffer')
-const { kBodyUsed } = require('../core/symbols')
+const { kBodyUsed } = require('@undici/core/symbols')
 const assert = require('assert')
-const { isErrored } = require('../core/util')
+const { isErrored } = require('@undici/core/util')
 const { isUint8Array, isArrayBuffer } = require('util/types')
 const { File: UndiciFile } = require('./file')
 const { parseMIMEType, serializeAMimeType } = require('./dataURL')

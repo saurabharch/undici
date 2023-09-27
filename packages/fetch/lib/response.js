@@ -2,7 +2,7 @@
 
 const { Headers, HeadersList, fill } = require('./headers')
 const { extractBody, cloneBody, mixinBody } = require('./body')
-const util = require('../core/util')
+const util = require('@undici/core/util')
 const { kEnumerableProperty } = util
 const {
   isValidReasonPhrase,
@@ -23,7 +23,7 @@ const { webidl } = require('./webidl')
 const { FormData } = require('./formdata')
 const { getGlobalOrigin } = require('./global')
 const { URLSerializer } = require('./dataURL')
-const { kHeadersList } = require('../core/symbols')
+const { kHeadersList } = require('@undici/core/symbols')
 const assert = require('assert')
 const { types } = require('util')
 

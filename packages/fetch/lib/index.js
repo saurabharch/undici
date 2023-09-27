@@ -53,13 +53,13 @@ const {
   subresource,
   DOMException
 } = require('./constants')
-const { kHeadersList } = require('../core/symbols')
+const { kHeadersList } = require('@undici/core/symbols')
 const EE = require('events')
 const { Readable, pipeline } = require('stream')
-const { addAbortListener, isErrored, isReadable, nodeMajor, nodeMinor } = require('../core/util')
+const { addAbortListener, isErrored, isReadable, nodeMajor, nodeMinor } = require('@undici/core/util')
 const { dataURLProcessor, serializeAMimeType } = require('./dataURL')
 const { TransformStream } = require('stream/web')
-const { getGlobalDispatcher } = require('../global')
+const { getGlobalDispatcher } = require('@undici/core/global')
 const { webidl } = require('./webidl')
 const { STATUS_CODES } = require('http')
 

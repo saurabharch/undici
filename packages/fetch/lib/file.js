@@ -6,7 +6,7 @@ const { kState } = require('./symbols')
 const { isBlobLike } = require('./util')
 const { webidl } = require('./webidl')
 const { parseMIMEType, serializeAMimeType } = require('./dataURL')
-const { kEnumerableProperty } = require('../core/util')
+const { kEnumerableProperty } = require('@undici/core/util')
 
 class File extends Blob {
   constructor (fileBits, fileName, options = {}) {

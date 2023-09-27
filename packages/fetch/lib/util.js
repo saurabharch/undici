@@ -1,9 +1,9 @@
 'use strict'
 
 const { redirectStatus, badPorts, referrerPolicy: referrerPolicyTokens } = require('./constants')
-const { getGlobalOrigin } = require('./global')
+const { getGlobalOrigin } = require('@undici/core/global')
 const { performance } = require('perf_hooks')
-const { isBlobLike, toUSVString, ReadableStreamFrom } = require('../core/util')
+const { isBlobLike, toUSVString, ReadableStreamFrom } = require('@undici/core/util')
 const assert = require('assert')
 const { isUint8Array } = require('util/types')
 
