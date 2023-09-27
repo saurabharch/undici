@@ -1,9 +1,9 @@
 'use strict'
 
-const { webidl } = require('../fetch/webidl')
-const { DOMException } = require('../fetch/constants')
-const { URLSerializer } = require('../fetch/dataURL')
-const { getGlobalOrigin } = require('../fetch/global')
+const { webidl } = require('@undici/fetch/webidl')
+const { DOMException } = require('@undici/fetch/constants')
+const { URLSerializer } = require('@undici/fetch/dataURL')
+const { getGlobalOrigin } = require('@undici/fetch/global')
 const { staticPropertyDescriptors, states, opcodes, emptyBuffer } = require('./constants')
 const {
   kWebSocketURL,
@@ -18,8 +18,8 @@ const { isEstablished, isClosing, isValidSubprotocol, failWebsocketConnection, f
 const { establishWebSocketConnection } = require('./connection')
 const { WebsocketFrameSend } = require('./frame')
 const { ByteParser } = require('./receiver')
-const { kEnumerableProperty, isBlobLike } = require('../core/util')
-const { getGlobalDispatcher } = require('../global')
+const { kEnumerableProperty, isBlobLike } = require('@undici/core/util')
+const { getGlobalDispatcher } = require('@undici/core/global')
 const { types } = require('util')
 
 let experimentalWarned = false

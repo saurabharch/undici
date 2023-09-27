@@ -160,6 +160,9 @@
     ]
   },
   "dependencies": {
+    "@undici/core": "1.0.0",
+    "@undici/fetch": "1.0.0",
+    "@undici/websocket": "1.0.0",
     "busboy": "^1.6.0"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "@undici/websocket",
+  "version": "1.0.0",
+  "main": "lib/webscoket.js",
+  "files": [ "lib/*" ],
+  "dependencies": {
+    "@undici/fetch": "1.0.0"
+  }
+}

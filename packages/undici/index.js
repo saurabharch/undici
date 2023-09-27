@@ -6,16 +6,16 @@ const errors = require('./lib/core/errors')
 const Pool = require('./lib/pool')
 const BalancedPool = require('./lib/balanced-pool')
 const Agent = require('./lib/agent')
-const util = require('./lib/core/util')
+const util = require('@undici/core/util')
 const { InvalidArgumentError } = errors
 const api = require('./lib/api')
-const buildConnector = require('./lib/core/connect')
+const buildConnector = require('@undici/core/connect')
 const MockClient = require('./lib/mock/mock-client')
 const MockAgent = require('./lib/mock/mock-agent')
 const MockPool = require('./lib/mock/mock-pool')
 const mockErrors = require('./lib/mock/mock-errors')
 const ProxyAgent = require('./lib/proxy-agent')
-const { getGlobalDispatcher, setGlobalDispatcher } = require('./lib/global')
+const { getGlobalDispatcher, setGlobalDispatcher } = require('@undici/core/global')
 const DecoratorHandler = require('./lib/handler/DecoratorHandler')
 const RedirectHandler = require('./lib/handler/RedirectHandler')
 const createRedirectInterceptor = require('./lib/interceptor/redirectInterceptor')
@@ -100,7 +100,7 @@ if (util.nodeMajor > 16 || (util.nodeMajor === 16 && util.nodeMinor >= 8)) {
   let fetchImpl = null
   module.exports.fetch = async function fetch (resource) {
     if (!fetchImpl) {
-      fetchImpl = require('./lib/fetch').fetch
+      fetchImpl = require('@undici/fetch').fetch
     }
 
     try {
@@ -113,14 +113,14 @@ if (util.nodeMajor > 16 || (util.nodeMajor === 16 && util.nodeMinor >= 8)) {
       throw err
     }
   }
-  module.exports.Headers = require('./lib/fetch/headers').Headers
-  module.exports.Response = require('./lib/fetch/response').Response
-  module.exports.Request = require('./lib/fetch/request').Request
-  module.exports.FormData = require('./lib/fetch/formdata').FormData
-  module.exports.File = require('./lib/fetch/file').File
+  module.exports.Headers = require('@undici/fetch/headers').Headers
+  module.exports.Response = require('@undici/fetch/response').Response
+  module.exports.Request = require('@undici/fetch/request').Request
+  module.exports.FormData = require('@undici/fetch/formdata').FormData
+  module.exports.File = require('@undici/fetch/file').File
   module.exports.FileReader = require('./lib/fileapi/filereader').FileReader
 
-  const { setGlobalOrigin, getGlobalOrigin } = require('./lib/fetch/global')
+  const { setGlobalOrigin, getGlobalOrigin } = require('@undici/fetch/global')
 
   module.exports.setGlobalOrigin = setGlobalOrigin
   module.exports.getGlobalOrigin = getGlobalOrigin
@@ -141,14 +141,14 @@ if (util.nodeMajor >= 16) {
   module.exports.getSetCookies = getSetCookies
   module.exports.setCookie = setCookie
 
-  const { parseMIMEType, serializeAMimeType } = require('./lib/fetch/dataURL')
+  const { parseMIMEType, serializeAMimeType } = require('@undici/fetch/dataURL')
 
   module.exports.parseMIMEType = parseMIMEType
   module.exports.serializeAMimeType = serializeAMimeType
 }
 
 if (util.nodeMajor >= 18 && hasCrypto) {
-  const { WebSocket } = require('./lib/websocket/websocket')
+  const { WebSocket } = require('@undici/websocket/websocket')
 
   module.exports.WebSocket = WebSocket
 }

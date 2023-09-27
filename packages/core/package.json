@@ -1,6 +1,5 @@
 {
   "name": "@undici/core",
-  "files": [
-    "lib/*"
-  ]
+  "version": "1.0.0",
+  "files": [ "lib/*" ]
 }

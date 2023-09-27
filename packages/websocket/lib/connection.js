@@ -10,11 +10,11 @@ const {
 } = require('./symbols')
 const { fireEvent, failWebsocketConnection } = require('./util')
 const { CloseEvent } = require('./events')
-const { makeRequest } = require('../fetch/request')
-const { fetching } = require('../fetch/index')
-const { Headers } = require('../fetch/headers')
-const { getGlobalDispatcher } = require('../global')
-const { kHeadersList } = require('../core/symbols')
+const { makeRequest } = require('@undici/fetch/request')
+const { fetching } = require('@undici/fetch/index')
+const { Headers } = require('@undici/fetch/headers')
+const { getGlobalDispatcher } = require('@undici/core/global')
+const { kHeadersList } = require('@undici/core/symbols')
 
 const channels = {}
 channels.open = diagnosticsChannel.channel('undici:websocket:open')

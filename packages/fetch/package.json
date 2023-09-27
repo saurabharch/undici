@@ -1,6 +1,9 @@
 {
   "name": "@undici/fetch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": ["lib/*"],
   "dependencies": {
-    "@undici/core": "file:../core"
+    "@undici/core": "1.0.0"
   }
 }

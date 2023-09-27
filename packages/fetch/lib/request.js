@@ -4,7 +4,7 @@
 
 const { extractBody, mixinBody, cloneBody } = require('./body')
 const { Headers, fill: fillHeaders, HeadersList } = require('./headers')
-const { FinalizationRegistry } = require('../compat/dispatcher-weakref')()
+const { FinalizationRegistry } = require('@undici/core/compat/dispatcher-weakref')()
 const util = require('@undici/core/util')
 const {
   isValidHTTPToken,
