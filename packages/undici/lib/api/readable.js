@@ -4,9 +4,9 @@
 
 const assert = require('assert')
 const { Readable } = require('stream')
-const { RequestAbortedError, NotSupportedError, InvalidArgumentError } = require('../core/errors')
-const util = require('../core/util')
-const { ReadableStreamFrom, toUSVString } = require('../core/util')
+const { RequestAbortedError, NotSupportedError, InvalidArgumentError } = require('@undici/core/errors')
+const util = require('@undici/core/util')
+const { ReadableStreamFrom, toUSVString } = require('@undici/core/util')
 
 let Blob
 

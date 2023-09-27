@@ -1,5 +1,5 @@
-const { addAbortListener } = require('../core/util')
-const { RequestAbortedError } = require('../core/errors')
+const { addAbortListener } = require('@undici/core/util')
+const { RequestAbortedError } = require('@undici/core/errors')
 
 const kListener = Symbol('kListener')
 const kSignal = Symbol('kSignal')

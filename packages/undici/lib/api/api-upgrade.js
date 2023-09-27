@@ -1,8 +1,8 @@
 'use strict'
 
-const { InvalidArgumentError, RequestAbortedError, SocketError } = require('../core/errors')
+const { InvalidArgumentError, RequestAbortedError, SocketError } = require('@undici/core/errors')
 const { AsyncResource } = require('async_hooks')
-const util = require('../core/util')
+const util = require('@undici/core/util')
 const { addSignal, removeSignal } = require('./abort-signal')
 const assert = require('assert')
 

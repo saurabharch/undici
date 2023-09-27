@@ -2,8 +2,8 @@
 
 const { kConstruct } = require('./symbols')
 const { Cache } = require('./cache')
-const { webidl } = require('../fetch/webidl')
-const { kEnumerableProperty } = require('../core/util')
+const { webidl } = require('@undici/fetch/webidl')
+const { kEnumerableProperty } = require('@undici/core/util')
 
 class CacheStorage {
   /**

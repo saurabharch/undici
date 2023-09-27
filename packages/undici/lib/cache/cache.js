@@ -2,16 +2,16 @@
 
 const { kConstruct } = require('./symbols')
 const { urlEquals, fieldValues: getFieldValues } = require('./util')
-const { kEnumerableProperty, isDisturbed } = require('../core/util')
-const { kHeadersList } = require('../core/symbols')
-const { webidl } = require('../fetch/webidl')
-const { Response, cloneResponse } = require('../fetch/response')
-const { Request } = require('../fetch/request')
-const { kState, kHeaders, kGuard, kRealm } = require('../fetch/symbols')
-const { fetching } = require('../fetch/index')
-const { urlIsHttpHttpsScheme, createDeferredPromise, readAllBytes } = require('../fetch/util')
+const { kEnumerableProperty, isDisturbed } = require('@undici/core/util')
+const { kHeadersList } = require('@undici/core/symbols')
+const { webidl } = require('@undici/fetch/webidl')
+const { Response, cloneResponse } = require('@undici/fetch/response')
+const { Request } = require('@undici/fetch/request')
+const { kState, kHeaders, kGuard, kRealm } = require('@undici/fetch/symbols')
+const { fetching } = require('@undici/fetch/index')
+const { urlIsHttpHttpsScheme, createDeferredPromise, readAllBytes } = require('@undici/fetch/util')
 const assert = require('assert')
-const { getGlobalDispatcher } = require('../global')
+const { getGlobalDispatcher } = require('@undici/core/global')
 
 /**
  * @see https://w3c.github.io/ServiceWorker/#dfn-cache-batch-operation

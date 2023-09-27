@@ -9,8 +9,8 @@ const {
   InvalidArgumentError,
   InvalidReturnValueError,
   RequestAbortedError
-} = require('../core/errors')
-const util = require('../core/util')
+} = require('@undici/core/errors')
+const util = require('@undici/core/util')
 const { AsyncResource } = require('async_hooks')
 const { addSignal, removeSignal } = require('./abort-signal')
 const assert = require('assert')

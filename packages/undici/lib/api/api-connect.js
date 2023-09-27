@@ -1,8 +1,8 @@
 'use strict'
 
 const { AsyncResource } = require('async_hooks')
-const { InvalidArgumentError, RequestAbortedError, SocketError } = require('../core/errors')
-const util = require('../core/util')
+const { InvalidArgumentError, RequestAbortedError, SocketError } = require('@undici/core/errors')
+const util = require('@undici/core/util')
 const { addSignal, removeSignal } = require('./abort-signal')
 
 class ConnectHandler extends AsyncResource {

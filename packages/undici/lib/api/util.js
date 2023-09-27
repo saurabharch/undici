@@ -1,8 +1,8 @@
 const assert = require('assert')
 const {
   ResponseStatusCodeError
-} = require('../core/errors')
-const { toUSVString } = require('../core/util')
+} = require('@undici/core/errors')
+const { toUSVString } = require('@undici/core/util')
 
 async function getResolveErrorBodyCallback ({ callback, body, contentType, statusCode, statusMessage, headers }) {
   assert(body)
