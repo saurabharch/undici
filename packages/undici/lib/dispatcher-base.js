@@ -5,8 +5,8 @@ const {
   ClientDestroyedError,
   ClientClosedError,
   InvalidArgumentError
-} = require('./core/errors')
-const { kDestroy, kClose, kDispatch, kInterceptors } = require('./core/symbols')
+} = require('@undici/core/errors')
+const { kDestroy, kClose, kDispatch, kInterceptors } = require('@undici/core/symbols')
 
 const kDestroyed = Symbol('destroyed')
 const kClosed = Symbol('closed')

@@ -9,8 +9,8 @@ const {
   kContentLength,
   kMockDispatch
 } = require('./mock-symbols')
-const { InvalidArgumentError } = require('../core/errors')
-const { buildURL } = require('../core/util')
+const { InvalidArgumentError } = require('@undici/core/errors')
+const { buildURL } = require('@undici/core/util')
 
 /**
  * Defines the scope API for an interceptor reply

@@ -1,7 +1,7 @@
 'use strict'
 
 const assert = require('assert')
-const { kHeadersList } = require('../core/symbols')
+const { kHeadersList } = require('@undici/core/symbols')
 
 function isCTLExcludingHtab (value) {
   if (value.length === 0) {

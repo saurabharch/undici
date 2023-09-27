@@ -1,8 +1,8 @@
 'use strict'
 
 const assert = require('assert')
-const { URLSerializer } = require('../fetch/dataURL')
-const { isValidHeaderName } = require('../fetch/util')
+const { URLSerializer } = require('@undici/fetch/dataURL')
+const { isValidHeaderName } = require('@undici/fetch/util')
 
 /**
  * @see https://url.spec.whatwg.org/#concept-url-equals

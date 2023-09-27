@@ -2,7 +2,7 @@
 
 const DispatcherBase = require('./dispatcher-base')
 const FixedQueue = require('./node/fixed-queue')
-const { kConnected, kSize, kRunning, kPending, kQueued, kBusy, kFree, kUrl, kClose, kDestroy, kDispatch } = require('./core/symbols')
+const { kConnected, kSize, kRunning, kPending, kQueued, kBusy, kFree, kUrl, kClose, kDestroy, kDispatch } = require('@undici/core/symbols')
 const PoolStats = require('./pool-stats')
 
 const kClients = Symbol('clients')

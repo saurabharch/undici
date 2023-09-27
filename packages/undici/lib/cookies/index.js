@@ -2,8 +2,8 @@
 
 const { parseSetCookie } = require('./parse')
 const { stringify, getHeadersList } = require('./util')
-const { webidl } = require('../fetch/webidl')
-const { Headers } = require('../fetch/headers')
+const { webidl } = require('@undici/fetch/webidl')
+const { Headers } = require('@undici/fetch/headers')
 
 /**
  * @typedef {Object} Cookie

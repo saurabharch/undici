@@ -10,10 +10,10 @@ const {
 const Client = require('./client')
 const {
   InvalidArgumentError
-} = require('./core/errors')
-const util = require('./core/util')
-const { kUrl, kInterceptors } = require('./core/symbols')
-const buildConnector = require('./core/connect')
+} = require('@undici/core/errors')
+const util = require('@undici/core/util')
+const { kUrl, kInterceptors } = require('@undici/core/symbols')
+const buildConnector = require('@undici/core/connect')
 
 const kOptions = Symbol('options')
 const kConnections = Symbol('connections')

@@ -1,13 +1,13 @@
 'use strict'
 
-const { InvalidArgumentError } = require('./core/errors')
-const { kClients, kRunning, kClose, kDestroy, kDispatch, kInterceptors } = require('./core/symbols')
+const { InvalidArgumentError } = require('@undici/core/errors')
+const { kClients, kRunning, kClose, kDestroy, kDispatch, kInterceptors } = require('@undici/core/symbols')
 const DispatcherBase = require('./dispatcher-base')
 const Pool = require('./pool')
 const Client = require('./client')
-const util = require('./core/util')
+const util = require('@undici/core/util')
 const createRedirectInterceptor = require('./interceptor/redirectInterceptor')
-const { WeakRef, FinalizationRegistry } = require('./compat/dispatcher-weakref')()
+const { WeakRef, FinalizationRegistry } = require('@undici/core/compat/dispatcher-weakref')()
 
 const kOnConnect = Symbol('onConnect')
 const kOnDisconnect = Symbol('onDisconnect')

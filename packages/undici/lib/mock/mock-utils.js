@@ -8,7 +8,7 @@ const {
   kOrigin,
   kGetNetConnect
 } = require('./mock-symbols')
-const { buildURL, nop } = require('../core/util')
+const { buildURL, nop } = require('@undici/core/util')
 const { STATUS_CODES } = require('http')
 const {
   types: {

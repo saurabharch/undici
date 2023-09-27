@@ -1,6 +1,6 @@
 'use strict'
 
-const { kClients } = require('../core/symbols')
+const { kClients } = require('@undici/core/symbols')
 const Agent = require('../agent')
 const {
   kAgent,
@@ -16,7 +16,7 @@ const {
 const MockClient = require('./mock-client')
 const MockPool = require('./mock-pool')
 const { matchValue, buildMockOptions } = require('./mock-utils')
-const { InvalidArgumentError, UndiciError } = require('../core/errors')
+const { InvalidArgumentError, UndiciError } = require('@undici/core/errors')
 const Dispatcher = require('../dispatcher')
 const Pluralizer = require('./pluralizer')
 const PendingInterceptorsFormatter = require('./pending-interceptors-formatter')

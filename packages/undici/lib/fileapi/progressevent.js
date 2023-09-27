@@ -1,6 +1,6 @@
 'use strict'
 
-const { webidl } = require('../fetch/webidl')
+const { webidl } = require('@undici/fetch/webidl')
 
 const kState = Symbol('ProgressEvent state')
 

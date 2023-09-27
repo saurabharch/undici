@@ -13,8 +13,8 @@ const {
   kConnected
 } = require('./mock-symbols')
 const { MockInterceptor } = require('./mock-interceptor')
-const Symbols = require('../core/symbols')
-const { InvalidArgumentError } = require('../core/errors')
+const Symbols = require('@undici/core/symbols')
+const { InvalidArgumentError } = require('@undici/core/errors')
 
 /**
  * MockClient provides an API that extends the Client to influence the mockDispatches.

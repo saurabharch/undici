@@ -7,9 +7,9 @@
 const assert = require('assert')
 const net = require('net')
 const { pipeline } = require('stream')
-const util = require('./core/util')
+const util = require('@undici/core/util')
 const timers = require('./timers')
-const Request = require('./core/request')
+const Request = require('@undici/core/request')
 const DispatcherBase = require('./dispatcher-base')
 const {
   RequestContentLengthMismatchError,
@@ -24,8 +24,8 @@ const {
   HTTPParserError,
   ResponseExceededMaxSizeError,
   ClientDestroyedError
-} = require('./core/errors')
-const buildConnector = require('./core/connect')
+} = require('@undici/core/errors')
+const buildConnector = require('@undici/core/connect')
 const {
   kUrl,
   kReset,
@@ -77,7 +77,7 @@ const {
   kHTTP2BuildRequest,
   kHTTP2CopyHeaders,
   kHTTP1BuildRequest
-} = require('./core/symbols')
+} = require('@undici/core/symbols')
 
 /** @type {import('http2')} */
 let http2

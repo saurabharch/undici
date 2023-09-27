@@ -1,6 +1,6 @@
 'use strict'
 
-const { UndiciError } = require('../core/errors')
+const { UndiciError } = require('@undici/core/errors')
 
 class MockNotMatchedError extends UndiciError {
   constructor (message) {

@@ -12,8 +12,8 @@ const {
   kEvents,
   kAborted
 } = require('./symbols')
-const { webidl } = require('../fetch/webidl')
-const { kEnumerableProperty } = require('../core/util')
+const { webidl } = require('@undici/fetch/webidl')
+const { kEnumerableProperty } = require('@undici/core/util')
 
 class FileReader extends EventTarget {
   constructor () {

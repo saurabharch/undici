@@ -1,12 +1,12 @@
 'use strict'
 
-const { kProxy, kClose, kDestroy, kInterceptors } = require('./core/symbols')
+const { kProxy, kClose, kDestroy, kInterceptors } = require('@undici/core/symbols')
 const { URL } = require('url')
 const Agent = require('./agent')
 const Pool = require('./pool')
 const DispatcherBase = require('./dispatcher-base')
-const { InvalidArgumentError, RequestAbortedError } = require('./core/errors')
-const buildConnector = require('./core/connect')
+const { InvalidArgumentError, RequestAbortedError } = require('@undici/core/errors')
+const buildConnector = require('@undici/core/connect')
 
 const kAgent = Symbol('proxy agent')
 const kClient = Symbol('proxy client')

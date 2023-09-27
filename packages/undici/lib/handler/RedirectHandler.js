@@ -1,9 +1,9 @@
 'use strict'
 
-const util = require('../core/util')
-const { kBodyUsed } = require('../core/symbols')
+const util = require('@undici/core/util')
+const { kBodyUsed } = require('@undici/core/symbols')
 const assert = require('assert')
-const { InvalidArgumentError } = require('../core/errors')
+const { InvalidArgumentError } = require('@undici/core/errors')
 const EE = require('events')
 
 const redirectableStatusCodes = [300, 301, 302, 303, 307, 308]
